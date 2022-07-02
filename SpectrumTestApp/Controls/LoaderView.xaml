@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+    xmlns:local="clr-namespace:SpectrumTestApp.ViewModels"
+    x:DataType="local:BaseViewModel"
+    IsVisible="{Binding IsBusy}"
+    x:Class="SpectrumTestApp.Controls.LoaderView">
+    <ContentView.Content>
+        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <BoxView BackgroundColor="Black" Opacity="0.3" />
+            <lottie:AnimationView
+                x:Name="LottieView"
+                Animation="loader.json"
+                AutoPlay="True"
+                RepeatMode="Infinite"
+                AnimationSource="AssetOrBundle"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand" />
+        </Grid>
+    </ContentView.Content>
+</ContentView>

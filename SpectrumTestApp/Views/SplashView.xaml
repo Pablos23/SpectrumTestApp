@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+    xmlns:viewModels="clr-namespace:SpectrumTestApp.ViewModels"
+    xmlns:vm="clr-namespace:SpectrumTestApp.ViewModels"
+    x:DataType="viewModels:SplasViewModel"
+    xmlns:behaviors="clr-namespace:SpectrumTestApp.Behaviours"
+    x:Class="SpectrumTestApp.Views.SplashView">
+    <ContentPage.BindingContext>
+        <vm:SplasViewModel />
+    </ContentPage.BindingContext>
+    <Grid
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand"
+        Margin="0"
+        Padding="0"
+        BackgroundColor="{StaticResource Primary}">
+        <Label
+            Style="{StaticResource H3}"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            VerticalOptions="StartAndExpand"
+            Text="Welcome!"
+            Margin="0,100,0,0"
+            TextColor="{StaticResource Dark-Blue-Tint-5}" />
+        <lottie:AnimationView
+            x:Name="LottieView"
+            Animation="splash.json"
+            AutoPlay="True"
+            AnimationSource="AssetOrBundle"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand">
+            <lottie:AnimationView.Behaviors>
+                <behaviors:EventToCommandBehavior Command="{Binding OnFinishedAnimationCommand}" EventName="OnFinishedAnimation" />
+            </lottie:AnimationView.Behaviors>
+        </lottie:AnimationView>
+    </Grid>
+
+</ContentPage>

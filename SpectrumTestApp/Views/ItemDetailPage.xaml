@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SpectrumTestApp.Views.ItemDetailPage"
+    xmlns:vm="clr-namespace:SpectrumTestApp.ViewModels"
+    xmlns:converters="clr-namespace:SpectrumTestApp.Converters"
+    Shell.BackgroundColor="{StaticResource Primary}"
+    Shell.NavBarHasShadow="False"
+    x:DataType="vm:ItemDetailViewModel"
+    Title="{Binding Title}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ServiceTypeToTitleConverter x:Key="ServiceTypeToTitleConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid RowDefinitions=".4*,*">
+        <StackLayout Grid.Row="0">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Color="{StaticResource Primary}" Offset="0" />
+                        <GradientStop Color="{StaticResource Dark-finalDay}" Offset="1.0" />
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                Text="{Binding Service.ServiceType, Converter={StaticResource ServiceTypeToTitleConverter}}"
+                Style="{StaticResource Header}"
+                TextColor="White" />
+            <BoxView
+                Margin="30,0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                HeightRequest="1"
+                BackgroundColor="White" />
+            <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <Label
+                    Style="{StaticResource Header}"
+                    Text="{Binding Service.Price, StringFormat='{0:C0}'}"
+                    FontSize="50"
+                    FontAttributes="Bold"
+                    TextColor="White" />
+                <StackLayout Spacing="0">
+                    <Label
+                        HorizontalTextAlignment="Start"
+                        Margin="0,20,0,0"
+                        Style="{StaticResource Header}"
+                        TextColor="White">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span
+                                    Text="00"
+                                    FontSize="15"
+                                    FontAttributes="Bold" />
+                                <Span Text="/mo" FontSize="9" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label
+                        Margin="0"
+                        Text="for 12 mos"
+                        FontSize="7"
+                        FontAttributes="Italic"
+                        TextColor="White" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+        <StackLayout Grid.Row="1">
+            <Label
+                HorizontalOptions="Center"
+                Margin="30,0"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="CenterAndExpand"
+                Text="{Binding Service.Text}"
+                Style="{StaticResource Subtitle}"
+                TextColor="{StaticResource Dark-Blue-Shade-5}" />
+            <Label
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="Shop with Confidence"
+                LineBreakMode="WordWrap"
+                CharacterSpacing="1"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="{StaticResource Dark-Blue-Shade-4}" />
+            <Grid
+                Padding="130,0,0,0"
+                ColumnDefinitions=".1*,*"
+                RowDefinitions="30,30,30">
+                <Image
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center">
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource FaSolid}"
+                            Glyph="&#xf00c;"
+                            Size="15"
+                            Color="{StaticResource Approved}" />
+                    </Image.Source>
+                </Image>
+                <Image
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center">
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource FaSolid}"
+                            Glyph="&#xf00c;"
+                            Size="15"
+                            Color="{StaticResource Approved}" />
+                    </Image.Source>
+                </Image>
+                <Image
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center">
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="{StaticResource FaSolid}"
+                            Glyph="&#xf00c;"
+                            Size="15"
+                            Color="{StaticResource Approved}" />
+                    </Image.Source>
+                </Image>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    HorizontalOptions="Start"
+                    HorizontalTextAlignment="Start"
+                    Text="No contracts"
+                    FontSize="12"
+                    FontAttributes="None"
+                    TextColor="{StaticResource Dark-Blue-Shade-5}" />
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    HorizontalOptions="Start"
+                    HorizontalTextAlignment="Start"
+                    Text="30-day money-back guarantee"
+                    FontSize="12"
+                    FontAttributes="None"
+                    TextColor="{StaticResource Dark-Blue-Shade-5}" />
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    HorizontalOptions="Start"
+                    HorizontalTextAlignment="Start"
+                    FontSize="12"
+                    Text="24 x 7 support"
+                    FontAttributes="None"
+                    TextColor="{StaticResource Dark-Blue-Shade-5}" />
+            </Grid>
+            <Button
+                CornerRadius="6"
+                Padding="30,0"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                Text="Shop Now"
+                BackgroundColor="{StaticResource Dark-Blue-Tint-3}" />
+            <Label
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="CenterAndExpand"
+                Text="Wireless speed may vary"
+                FontSize="11"
+                FontAttributes="Italic"
+                TextColor="{StaticResource Dark-Blue-Shade-3}" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

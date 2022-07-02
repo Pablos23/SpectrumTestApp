@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SpectrumTestApp.Views.AboutPage"
+    xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+    xmlns:vm="clr-namespace:SpectrumTestApp.ViewModels">
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+    <Shell.TitleView>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Label
+                HorizontalOptions="CenterAndExpand"
+                FontSize="25"
+                Margin="0,10,0,0"
+                Text="Pablo Cabrera"
+                TextColor="White" />
+        </StackLayout>
+    </Shell.TitleView>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout
+            Orientation="Horizontal"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand" />
+        <StackLayout Grid.Row="1">
+            <StackLayout
+                Orientation="Vertical"
+                Padding="30,24,30,24"
+                Spacing="10">
+                <Label
+                    Text="I am a .Net developer with more than 8 years of experience working with Xamarin, I have participated in different projects and always use the best practices possible."
+                    Style="{StaticResource Secondary}"
+                    FontSize="18"
+                    Padding="0,0,0,0" />
+                <Label
+                    FontSize="16"
+                    Padding="0,24,0,0"
+                    HorizontalTextAlignment="Center"
+                    FontAttributes="Italic">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Does this information is not enogh, check my LinkedIn is Free!" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button
+                    Margin="0,10,0,0"
+                    CornerRadius="10"
+                    Text="Go LinkedIn"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    ContentLayout="Left,30"
+                    Command="{Binding OpenLinkedInCommand}"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White">
+                    <Button.ImageSource>
+                        <FontImageSource
+                            FontFamily="{StaticResource FaBrands}"
+                            Glyph="&#xf08c;"
+                            Size="30"
+                            Color="white" />
+                    </Button.ImageSource>
+                </Button>
+                <lottie:AnimationView
+                    x:Name="LottieView"
+                    Animation="splash.json"
+                    AutoPlay="True"
+                    HeightRequest="200"
+                    WidthRequest="200"
+                    RepeatMode="Infinite"
+                    AnimationSource="AssetOrBundle"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center" />
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

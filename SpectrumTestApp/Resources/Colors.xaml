@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="SpectrumTestApp.Resources.Colors"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <!--#region Dark-->
+    <Color x:Key="Primary">#001b33</Color>
+    <Color x:Key="Dark-Info-Color">#0766c1</Color>
+    <Color x:Key="Dark-CTA-5">#1e243e</Color>
+    <Color x:Key="Dark-CTA-4">#333c68</Color>
+    <Color x:Key="Dark-CTA-3">#475392</Color>
+    <Color x:Key="Dark-CTA-2">#5b6bbb</Color>
+    <Color x:Key="Dark-CTA-Action-Color">#6577d0</Color>
+    <Color x:Key="Dark-Blue-Tint-5">#c3d7eb</Color>
+    <Color x:Key="Dark-Blue-Tint-4">#9ebbd8</Color>
+    <Color x:Key="Dark-Blue-Tint-3">#0082bf</Color>
+    <Color x:Key="Dark-Blue-Tint-2">#5584b1</Color>
+    <Color x:Key="Dark-Blue-Tint-1">#31699e</Color>
+    <Color x:Key="Dark-USX-Brand-Blue">#0c4d8b</Color>
+    <Color x:Key="Dark-Blue-Shade-1">#0a3f72</Color>
+    <Color x:Key="Dark-Blue-Shade-2">#083159</Color>
+    <Color x:Key="Dark-Blue-Shade-3">#052440</Color>
+    <Color x:Key="Dark-Blue-Shade-4">#031627</Color>
+    <Color x:Key="Dark-Blue-Shade-5">#01080e</Color>
+    <Color x:Key="Dark-Red-Tint-5">#ffd6d9</Color>
+    <Color x:Key="Dark-Red-Tint-4">#efb1b4</Color>
+    <Color x:Key="Dark-Red-Tint-3">#de8c8e</Color>
+    <Color x:Key="Dark-Red-Tint-2">#cb6a6d</Color>
+    <Color x:Key="Dark-Red-Tint-1">#ba3f43</Color>
+    <Color x:Key="Dark-USX-Brand-Red">#a90f14</Color>
+    <Color x:Key="Dark-Red-Shade-0">#D13232</Color>
+    <Color x:Key="Dark-Red-Shade-1">#870c10</Color>
+    <Color x:Key="Dark-Red-Shade-2">#65090c</Color>
+    <Color x:Key="Dark-Red-Shade-3">#4d0709</Color>
+    <Color x:Key="Dark-Red-Shade-4">#330406</Color>
+    <Color x:Key="Dark-Red-Shade-5">#220304</Color>
+    <Color x:Key="Dark-Red-Denied">#431C23</Color>
+    <Color x:Key="Dark-Pending">#433523</Color>
+    <Color x:Key="Dark-Notified">#193C4D</Color>
+    <Color x:Key="Dark-Priority-16">#29ffffff</Color>
+    <Color x:Key="Dark-Priority-15">#26ffffff</Color>
+    <Color x:Key="Dark-Priority-14">#24ffffff</Color>
+    <Color x:Key="Dark-Priority-12">#1Fffffff</Color>
+    <Color x:Key="Dark-Priority-09">#17ffffff</Color>
+    <Color x:Key="Dark-Priority-08">#14ffffff</Color>
+    <Color x:Key="Dark-Priority-07">#12ffffff</Color>
+    <Color x:Key="Dark-Priority-05">#0Dffffff</Color>
+    <Color x:Key="Dark-Selected-Day">#D8D8D8</Color>
+    <Color x:Key="Dark-Button-primary">#3366FF</Color>
+    <Color x:Key="Dark-BackgroundNotification-Secundary">#243443</Color>
+    <Color x:Key="Dark-BackgroundNotification-Primary">#13324D</Color>
+    <Color x:Key="Dark-Notification-Background">#0A1020</Color>
+    <Color x:Key="Dark-TimeOffOption-Background">#325675</Color>
+    <Color x:Key="Dark-Interrogation-Background">#8AA4F1</Color>
+    <Color x:Key="Dark-ConfirmationText">#EFF2F9</Color>
+    <Color x:Key="Dark-GoBackBtn-Background">#16375E</Color>
+    <Color x:Key="Dark-Entry-Background">#2D4D6A</Color>
+    <Color x:Key="Dark-EditorCust-Background">#112D45</Color>
+
+    <!--  #global Dark variables  -->
+    <Color x:Key="Dark-Terminal">#15314e</Color>
+    <Color x:Key="Dark-SelectedTerminal">#527da6</Color>
+    <Color x:Key="Dark-Background">#081b2c</Color>
+    <Color x:Key="Dark-Text-Field">#13324e</Color>
+    <Color x:Key="Dark-CTA-Secondary">#517da4</Color>
+    <Color x:Key="Dark-Text-Secondary">#8f9bb3</Color>
+    <Color x:Key="Dark-Text">#ffffff</Color>
+    <Color x:Key="Dark-CTA">#3366ff</Color>
+    <Color x:Key="Dark-HTCaption">#96C1E8</Color>
+    <Color x:Key="Dark-Error">#d23232</Color>
+    <Color x:Key="Dark-Success">#31d14d</Color>
+    <Color x:Key="Dark-Warning">#eea932</Color>
+    <Color x:Key="Dark-Home-Primary">#517DA4</Color>
+    <Color x:Key="primary-menu-item">#1F4465</Color>
+    <Color x:Key="Dark-secondary-menu">#13324D</Color>
+    <Color x:Key="PTA-menu">#32D14D</Color>
+    <Color x:Key="Dark-Training-Text">#24FBCF</Color>
+    <Color x:Key="Dark-Featured-Training-Background">#162839</Color>
+    <Color x:Key="Dark-FBCheckBox">#3366FF</Color>
+    <Color x:Key="Dark-FBBtnBackground">#3366FF</Color>
+    <Color x:Key="FBActiveStarRate">#D4A900</Color>
+    <Color x:Key="FBInactiveStarRate">#DCDCDC</Color>
+    <Color x:Key="Dark-FBMainFrame">#13324D</Color>
+    <Color x:Key="Dark-SlideBarThumb">#96C1E8</Color>
+    <Color x:Key="Dark-Yellow-ToDo">#4f3e25</Color>
+    <Color x:Key="Dark-Red-ToDo">#461a25</Color>
+    <Color x:Key="Dark-Miles-Text">#24FBCF</Color>
+    <Color x:Key="Dark-finalDay">#152A63</Color>
+    <Color x:Key="Dark-Current-Day">#85878D</Color>
+    <Color x:Key="Dark-DissabledFriday">#262933</Color>
+    <Color x:Key="Dark-DissabledText">#8EA4B8</Color>
+    <Color x:Key="Dark-PlaceHolder">#DCEDFE</Color>
+
+    <!--#endregion Dark-->
+    <!--#region Light-->
+    <Color x:Key="Light-Background-Issue-To-Resolve">#EDF1F7</Color>
+    <Color x:Key="Light-Background-Expander">#F7F9FC</Color>
+    <Color x:Key="Light-Yellow-ToDo-BorderColor">#C68021</Color>
+    <Color x:Key="CDL-BackgroundColor">#D13232</Color>
+    <Color x:Key="CDL-BorderColor">#D13232</Color>
+    <Color x:Key="Feedback-BorderColor">#707070</Color>
+    <Color x:Key="Trailer-BorderColor">#C7CDD9</Color>
+
+    <!--  #global Light variables  -->
+    <Color x:Key="Light-Background">#f8f9fd</Color>
+    <Color x:Key="Light-Text-Field">#f8f9fd</Color>
+    <Color x:Key="Light-CTA-Secondary">#2b5175</Color>
+    <Color x:Key="Light-Text-Secondary">#212b46</Color>
+    <Color x:Key="Light-Text">#212b46</Color>
+    <Color x:Key="FBLight-Text">#222B45</Color>
+    <Color x:Key="Light-FBCheckBox">#3366FF</Color>
+    <Color x:Key="Light-FBBtnBackground">#3366FF</Color>
+    <Color x:Key="Light-CTA">#0c4e8b</Color>
+    <Color x:Key="Light-Error">#d23232</Color>
+    <Color x:Key="Light-Success">#31d14d</Color>
+    <Color x:Key="Light-Warning">#eea932</Color>
+    <Color x:Key="Light-secondary-menu">#C7E3FF</Color>
+    <Color x:Key="Light-Selected-Day">#C5CEE0</Color>
+    <Color x:Key="Light-Notification-Background">#222B45</Color>
+    <Color x:Key="Light-TimeOff-Background">#E1E5EF</Color>
+    <Color x:Key="Light-UrgentReq-Label">#3F465D</Color>
+    <Color x:Key="Light-GoBackBtn-Background">#EBF0FF</Color>
+    <Color x:Key="Light-FBMainFrame">#FFFFFF</Color>
+    <Color x:Key="Light-Cant-Take-It-BackgroundColor">#e3eafc</Color>
+    <Color x:Key="Light-Cant-Take-It-TextColor">#3467fe</Color>
+    <Color x:Key="Light-Yellow-ToDo">#e2d0b7</Color>
+    <Color x:Key="Light-Red-ToDo">#e5b8bc</Color>
+    <Color x:Key="Light-Selected-Event">#5E6784</Color>
+
+    <!--#endregion Light-->
+
+    <!--  #Slider Color light variables  -->
+    <Color x:Key="Light-blue-status-primary">#345E82</Color>
+    <Color x:Key="Light-blue-status-secundary">#125997</Color>
+    <Color x:Key="Light-yellow-status-primary">#EEA933</Color>
+    <Color x:Key="Light-yellow-status-secundary">#FFCC00</Color>
+    <Color x:Key="Light-red-status-primary">#D13232</Color>
+    <Color x:Key="Light-red-status-secundary">#E54816</Color>
+    <Color x:Key="Light-yellow-status-default">#F82C01</Color>
+    <Color x:Key="Light-green-tint-1">#3AF8D2</Color>
+    <Color x:Key="Light-green-status-primary">#32D14D</Color>
+    <Color x:Key="Light-green-status-secundary">#7AE500</Color>
+    <Color x:Key="Light-green-status-tertiary">#7CC400</Color>
+    <Color x:Key="Light-blue-status-tertiary">#39B2B9</Color>
+    <Color x:Key="Light-blue-status-quaternary">#17E3CF</Color>
+    <Color x:Key="Light-blue-status-quinary">#1CD1AC</Color>
+    <Color x:Key="Light-request-status-primary">#4D9AE5</Color>
+    <Color x:Key="Light-request-status-secundary">#BED8F1</Color>
+    <Color x:Key="Light-pending-status-primary">#A89146</Color>
+    <Color x:Key="Light-pending-status-secundary">#DDDD9C</Color>
+    <Color x:Key="Light-pending-status-tertiary">#6D4B19</Color>
+    <Color x:Key="Light-Assigned-status-primary">#4FB24F</Color>
+    <Color x:Key="Light-Assigned-status-secundary">#AEEEA7</Color>
+    <Color x:Key="Light-Assigned-status-tertiary">#196D2D</Color>
+    <Color x:Key="Light-Denied-status-primary">#C63E3E</Color>
+    <Color x:Key="Light-Denied-status-secundary">#DD9C9C</Color>
+    <Color x:Key="Light-Denied-status-tertiary">#6D1919</Color>
+    <Color x:Key="Light-ServiceNotified-status-primary">#9CD9DD</Color>
+    <Color x:Key="Light-ServiceNotified-status-secundary">#19596D</Color>
+    <Color x:Key="Light-request-status-widget">#A5CCFF</Color>
+    <Color x:Key="Light-pending-status-widget">#FBD462</Color>
+    <Color x:Key="Light-Assigned-status-widget">#7AFB62</Color>
+    <Color x:Key="Light-Denied-status-widget">#E3E3E3</Color>
+    <Color x:Key="Light-Notified-status-widget">#62EBFB</Color>
+    <!--#endregion Slider Color light-->
+
+    <!--  Basic Colors  -->
+    <Color x:Key="Denied">#FF5B5B</Color>
+    <Color x:Key="Approved">#49C980</Color>
+    <Color x:Key="Pending">#F79743</Color>
+    <Color x:Key="Urgent">#B26FF2</Color>
+    <Color x:Key="Calendar-Selected-Color">#835DA7</Color>
+    <Color x:Key="Error-Color">#FF3D3D</Color>
+    <Color x:Key="Cancel-Dark-Color">#127DA4</Color>
+
+</ResourceDictionary>

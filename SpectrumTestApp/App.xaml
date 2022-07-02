@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:r="clr-namespace:SpectrumTestApp.Resources"
+    x:Class="SpectrumTestApp.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:TypeArguments="x:String" x:Key="FaBrands">
+                <On Platform="Android" Value="faBrands.otf#Regular" />
+                <On Platform="iOS" Value="FontAwesome5Brands-Regular" />
+            </OnPlatform>
+
+            <OnPlatform x:TypeArguments="x:String" x:Key="FaSolid">
+                <On Platform="Android" Value="faSolid.otf#Regular" />
+                <On Platform="iOS" Value="FontAwesome5Free-Solid" />
+            </OnPlatform>
+
+            <OnPlatform x:TypeArguments="x:String" x:Key="FaRegular">
+                <On Platform="Android" Value="faRegular.otf#Regular" />
+                <On Platform="iOS" Value="FontAwesome5Free-Regular" />
+            </OnPlatform>
+            <ResourceDictionary.MergedDictionaries>
+                <r:CharacterStyles />
+                <r:Colors />
+                <r:Components />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

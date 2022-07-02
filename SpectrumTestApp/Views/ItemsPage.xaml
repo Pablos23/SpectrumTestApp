@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SpectrumTestApp.Views.ItemsPage"
+    xmlns:local="clr-namespace:SpectrumTestApp.ViewModels"
+    xmlns:model="clr-namespace:SpectrumTestApp.Models"
+    xmlns:controls="clr-namespace:SpectrumTestApp.Controls"
+    xmlns:converters="clr-namespace:SpectrumTestApp.Converters"
+    xmlns:effects="clr-namespace:SpectrumTestApp.Effects"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    x:DataType="local:ItemsViewModel"
+    x:Name="ServicesItemsPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ServiceTypeToTitleConverter x:Key="ServiceTypeToTitleConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Shell.TitleView>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <SearchBar
+                x:Name="SearchBar"
+                FontSize="15"
+                Placeholder="Search a Service"
+                PlaceholderColor="White"
+                CancelButtonColor="White"
+                SearchCommand="{Binding SearchCommand}"
+                SearchCommandParameter="{Binding Source={x:Reference SearchBar}, Path=Text}"
+                TextColor="White">
+                <SearchBar.Behaviors>
+                    <xct:UserStoppedTypingBehavior
+                        Command="{Binding SearchCommand}"
+                        StoppedTypingTimeThreshold="500"
+                        MinimumLengthThreshold="0"
+                        ShouldDismissKeyboardAutomatically="false" />
+                </SearchBar.Behaviors>
+            </SearchBar>
+        </StackLayout>
+    </Shell.TitleView>
+    <Grid>
+        <Grid>
+            <CollectionView
+                x:Name="ItemsListView"
+                ItemsSource="{Binding Items}"
+                SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Service">
+                        <StackLayout BackgroundColor="Transparent">
+                            <controls:CustomFrame
+                                CornerRadius="20,20,0,0"
+                                BorderColor="{StaticResource Dark-Selected-Day}"
+                                IsClippedToBounds="True"
+                                HasShadow="False"
+                                Padding="0,0,0,10"
+                                Margin="20,10,20,10">
+                                <StackLayout>
+                                    <controls:CustomFrame
+                                        CornerRadius="20,20,0,0"
+                                        Padding="2"
+                                        BackgroundColor="{StaticResource Primary}">
+                                        <controls:CustomFrame.Background>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                                <LinearGradientBrush.GradientStops>
+                                                    <GradientStop Color="{StaticResource Primary}" Offset="0" />
+                                                    <GradientStop Color="{StaticResource Dark-finalDay}" Offset="1.0" />
+                                                </LinearGradientBrush.GradientStops>
+                                            </LinearGradientBrush>
+                                        </controls:CustomFrame.Background>
+                                        <Label
+                                            Margin="0,10"
+                                            CharacterSpacing="1"
+                                            Text="{Binding ServiceType, Converter={StaticResource ServiceTypeToTitleConverter}}"
+                                            HorizontalOptions="Center"
+                                            LineBreakMode="WordWrap"
+                                            HorizontalTextAlignment="Center"
+                                            Style="{DynamicResource H3}"
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            FontSize="14" />
+                                    </controls:CustomFrame>
+                                    <Label
+                                        HorizontalOptions="Center"
+                                        HorizontalTextAlignment="Center"
+                                        LineBreakMode="WordWrap"
+                                        Text="{Binding Text}"
+                                        Style="{DynamicResource H4}"
+                                        FontSize="12" />
+                                    <Label
+                                        Margin="0,10"
+                                        HorizontalOptions="Center"
+                                        HorizontalTextAlignment="Center"
+                                        Text="{Binding Price, StringFormat='Only {0:C0}'}"
+                                        FontAttributes="Bold"
+                                        Style="{DynamicResource lblButtons}"
+                                        FontSize="11" />
+                                    <Frame
+                                        HorizontalOptions="CenterAndExpand"
+                                        VerticalOptions="CenterAndExpand"
+                                        Padding="10,5"
+                                        CornerRadius="10"
+                                        BackgroundColor="{StaticResource Dark-Blue-Tint-3}"
+                                        IsClippedToBounds="True"
+                                        HasShadow="False">
+                                        <Label
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            HorizontalOptions="Center"
+                                            HorizontalTextAlignment="Center"
+                                            Text="Shop now"
+                                            TextTransform="Uppercase"
+                                            LineBreakMode="NoWrap"
+                                            Style="{DynamicResource ListItemDetailTextStyle}"
+                                            FontSize="11" />
+                                    </Frame>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                                        <ImageButton
+                                            Padding="2"
+                                            CornerRadius="7"
+                                            HeightRequest="14"
+                                            WidthRequest="14"
+                                            HorizontalOptions="End"
+                                            VerticalOptions="Center"
+                                            BackgroundColor="{StaticResource Dark-Notified}"
+                                            effects:TooltipEffect.Position="Left"
+                                            effects:TooltipEffect.BackgroundColor="{StaticResource Dark-Text-Secondary}"
+                                            effects:TooltipEffect.TextColor="{StaticResource Primary}"
+                                            effects:TooltipEffect.Text="It all depends on the conditions of use"
+                                            effects:TooltipEffect.HasTooltip="True">
+                                            <ImageButton.Source>
+                                                <FontImageSource
+                                                    FontFamily="{StaticResource FaSolid}"
+                                                    Glyph="&#xf129;"
+                                                    Size="10"
+                                                    Color="White" />
+                                            </ImageButton.Source>
+                                        </ImageButton>
+                                        <Label
+                                            VerticalOptions="Center"
+                                            HorizontalTextAlignment="End"
+                                            Margin="0,0,10,0"
+                                            Text="Wireless speeds may vary"
+                                            FontAttributes="Italic"
+                                            Style="{DynamicResource lblButtons}"
+                                            TextColor="{StaticResource Dark-DissabledText}"
+                                            FontSize="7" />
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </controls:CustomFrame>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    NumberOfTapsRequired="1"
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"
+                                    CommandParameter="{Binding .}" />
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <ImageButton
+                HorizontalOptions="End"
+                VerticalOptions="End"
+                HeightRequest="60"
+                WidthRequest="60"
+                CornerRadius="30"
+                Margin="20"
+                Padding="15"
+                Command="{Binding SupportCommand}"
+                BackgroundColor="{StaticResource Primary}">
+                <ImageButton.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Color="{StaticResource Dark-Blue-Tint-3}" Offset="0" />
+                            <GradientStop Color="{StaticResource Dark-Blue-Tint-4}" Offset="1.0" />
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </ImageButton.Background>
+                <ImageButton.Source>
+                    <FontImageSource
+                        FontFamily="{StaticResource FaSolid}"
+                        Glyph="&#xf590;"
+                        Size="15"
+                        Color="{StaticResource Primary}" />
+                </ImageButton.Source>
+            </ImageButton>
+        </Grid>
+        <controls:LoaderView />
+    </Grid>
+</ContentPage>
